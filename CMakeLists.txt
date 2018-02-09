@@ -116,8 +116,10 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
+  /home/nvidia/delta-1/catkin_ws/src/thirdParty/jetsonTX1GPIO
+
 )
 
 ## Declare a C++ library
@@ -133,7 +135,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/motor_test_node.cpp)
+add_executable(motor_test /home/nvidia/delta-1/catkin_ws/src/motor_test/src/exampleGPIOApp.cpp /home/nvidia/delta-1/catkin_ws/src/thirdParty/jetsonTX1GPIO/jetsonGPIO.c)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
